@@ -181,9 +181,9 @@ function icecatCategoryTable($xml)
     ob_flush();
     flush();
 
-    $cateories_list = $xml->children()[0]->children()[0];
+    $categories_list = $xml->children()[0]->children()[0];
     $c = [];
-    foreach($cateories_list as $category) {
+    foreach($categories_list as $category) {
         $ci=(int)$category['ID'];
         $cp=(int)$category->ParentCategory['ID'];
         $cn=(string)$category->Name[0]['Value'];
